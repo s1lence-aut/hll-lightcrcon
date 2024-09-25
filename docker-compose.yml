@@ -1,0 +1,6 @@
+services:
+  hll_crcon_players:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    command: node main.mjs

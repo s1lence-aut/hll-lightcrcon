@@ -1,0 +1,23 @@
+{
+  "name": "hll-crcon-players",
+  "version": "1.0.0",
+  "description": "Discord bot for Hell Let Loose CRCON",
+  "main": "main.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node main.mjs",
+    "dev": "nodemon main.mjs"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
