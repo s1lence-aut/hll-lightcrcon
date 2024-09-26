@@ -23,7 +23,7 @@ It allows server administrators to view player lists, send messages to one or al
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/hll-lightcrcon.git
+   git clone https://github.com/s1lence-aut/hll-lightcrcon.git
    cd hll-lightcrcon
    ```
 
