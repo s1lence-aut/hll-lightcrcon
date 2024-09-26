@@ -118,7 +118,7 @@ client.on('interactionCreate', async interaction => {
 
                     const replyContent = `# Players on Server\n\n${players.map(player => {
                         const vipTag = player.is_vip ? '**(VIP)** ' : '';
-                        const profileLink = `[Profile](<https://steamcommunity.com/profiles/${player.player_id}>)`;
+                        const profileLink = `[Profile](<https://steamcommunity.com/profiles/${player.steam_id_64}>)`;
                         return `${vipTag}${player.name} - ${profileLink}`;
                     }).join('\n')}`;
 
@@ -179,7 +179,7 @@ client.on('interactionCreate', async interaction => {
 
                     const replyContent = `# Players on Server\n\n${players.map(player => {
                         const vipTag = player.is_vip ? '**(VIP)** ' : '';
-                        const profileLink = `[Profile](<https://steamcommunity.com/profiles/${player.player_id}>)`;
+                        const profileLink = `[Profile](<https://steamcommunity.com/profiles/${player.steam_id_64}>)`;
                         return `${vipTag}${player.name} - ${profileLink}`;
                     }).join('\n')}`;
 
@@ -331,7 +331,7 @@ client.on('interactionCreate', async interaction => {
                             await interaction.followUp({ content: `Message successfully sent to ${player.name}`, ephemeral: true });
                         } catch (error) {
                             logger.error(`Error sending message to ${player.name}:`, error);
-                            await interaction.followUp({ content: `Error sending message to ${player.name}`, ephemeral: true });
+                            await interaction.followUp({ content: `Error sending message to ${player.name}: ${error.message}`, ephemeral: true });
                         }
                     } else {
                         await interaction.followUp({ content: `Player ${username} not found`, ephemeral: true });
@@ -356,7 +356,7 @@ client.on('interactionCreate', async interaction => {
                             await interaction.followUp({ content: `Player ${player.name} successfully kicked`, ephemeral: true });
                         } catch (error) {
                             logger.error(`Error kicking ${player.name}:`, error);
-                            await interaction.followUp({ content: `Error kicking ${player.name}`, ephemeral: true });
+                            await interaction.followUp({ content: `Error kicking ${player.name}: ${error.message}`, ephemeral: true });
                         }
                     } else {
                         await interaction.followUp({ content: `Player ${username} not found`, ephemeral: true });
