@@ -7,16 +7,17 @@ It allows server administrators to view player lists, send messages to one or al
 
 - **Player List**: Generate and refresh a list of current players on the game server.
 - **VIP Highlighting**: VIP players are highlighted in the player list.
-- **Player Messaging**: Send messages to individual players or broadcast to all players (manually)
+- **Player Messaging**: Send messages to individual players (manually) or broadcast to all players
 - **Player Kicking**: Kick players from the server with a specified reason (manually)
-- **Steam Profile Links**: Quick access to players' Steam profiles.
+- **Steam Profile Links**: Quick access to players Steam profiles.
 
 ## Prerequisites
 
 - Node.js (v18 or higher recommended)
 - npm (comes with Node.js)
 - A Discord bot token
-- Access to a game server API
+- Access to a HLL CRCON Server
+- CRCON API Token
 
 ## Installation
 
@@ -36,7 +37,7 @@ It allows server administrators to view player lists, send messages to one or al
    DISCORD_BOT_TOKEN=your_discord_bot_token_here
    ALLOWED_CHANNEL_ID=your_discord_channel_id_here
    RCON_API_BASE_URL=your_game_server_api_base_url
-   RCON_API_TOKEN=your_game_server_api_token
+   RCON_API_TOKEN=your_crcon_api_token
    ```
 
    Replace the placeholder values with your actual Discord bot token, channel ID, and game server CRCON API details.
